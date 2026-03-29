@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 220px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #speedDisplay, #delayDisplay {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    input[type="number"] {
+      width: 50px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>AutoScroller</h3>
+
+  <div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
+
+  <div>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+    <div id="speedDisplay">Speed: 1</div>
+  </div>
+
+  <div>
+    <button id="forward">↓</button>
+    <button id="reverse">↑</button>
+  </div>
+
+  <div>
+    <label>Page Delay (ms):
+      <input id="delayInput" type="number" value="2000" min="0" step="500">
+    </label>
+    <button id="setDelay">Set</button>
+    <div id="delayDisplay">Delay: 2000ms</div>
+  </div>
+
+  <script src="background.js"></script>  
+</body>
+</html>
