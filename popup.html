@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="index.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+
     <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,32 +30,43 @@
       width: 50px;
       margin-left: 5px;
     }
+
+    label {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <h3>AutoScroller</h3>
+  <h3 class="title">AutoScroller</h3>
 
-  <div>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
+  <div class="group">
+    <button class="play" id="start">Start</button>
+    <button class="play" id="stop">Stop</button>
   </div>
 
-  <div>
-    <button id="increase">+</button>
-    <button id="decrease">-</button>
+  <div class="group">
+    <button id="increase" class="box">+</button>
+    <button id="decrease" class="box">-</button>
+    </div>
     <div id="speedDisplay">Speed: 1</div>
+  
+
+  <div class="group">
+    <button id="forward" class="box">
+       <i class="fa-solid fa-arrow-down"></i>
+      </button>
+    <button id="reverse" class="box">
+       <i class="fa-solid fa-arrow-up"></i>
+      </button>
   </div>
 
   <div>
-    <button id="forward">↓</button>
-    <button id="reverse">↑</button>
-  </div>
-
-  <div>
+    <div class="group">
     <label>Page Delay (ms):
       <input id="delayInput" type="number" value="2000" min="0" step="500">
     </label>
-    <button id="setDelay">Set</button>
+    <button id="setDelay" class="box">Set</button>
+    </div>
     <div id="delayDisplay">Delay: 2000ms</div>
   </div>
 

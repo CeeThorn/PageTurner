@@ -1,0 +1,86 @@
+.play{
+
+    background-color: #161a20;
+    border: none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+
+    /*Used to align the psuedo element w/ the button*/
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.play::after{
+    content:'';
+    position: absolute;
+    height: 110%;
+    width: 107%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, rgb(42, 110, 199), blueviolet);
+    z-index: -1; /*allows the psuedo element to be behind the button*/
+   
+
+
+}
+
+.play:hover{
+    z-index: 0;
+    box-shadow: 40 0 100px rgb(42, 110, 199), -40 0 100px blueviolet;
+    /*I want a blue tint from 0 on x axis toward the right side  . . .
+    no vertical movement, the 100px gives it a soft glow
+    */
+    /*psuefo class not psuedo element*/
+}
+
+.title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box{
+    background-color: #161a20;
+    border: none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+
+    /*Used to align the psuedo element w/ the button*/
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+
+.box::after{
+    content:'';
+    position: absolute;
+    height: 110%;
+    width: 107%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, rgb(42, 110, 199), blueviolet);
+    z-index: -1; /*allows the psuedo element to be behind the button*/
+   
+
+
+}
+
+.box:hover{
+    z-index: 0;
+    box-shadow: 40 0 100px rgb(42, 110, 199), -40 0 100px blueviolet;
+    /*I want a blue tint from 0 on x axis toward the right side  . . .
+    no vertical movement, the 100px gives it a soft glow
+    */
+    /*psuefo class not psuedo element*/
+}
