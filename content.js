@@ -6,6 +6,7 @@ let direction = 1;
 let turning = false;
 let pageTurnDelay = 2000;
 let triggerAtButton = false;
+let lastTime = performance.now();//ruuns and starts counting from 1000 ms
 
 startScroll();
 
@@ -13,14 +14,30 @@ startScroll();
 function startScroll() { scrolling = true; }
 function stopScroll() { scrolling = false; }
 
+
 function autoScroll() {
   if (scrolling) {
-    window.scrollBy({ top: speed * direction, behavior: "smooth" });
+    window.scrollBy({
+      top: speed * direction
+    });
   }
+
   requestAnimationFrame(autoScroll);
-  //call auto everyframe 
 }
+
 autoScroll();
+//function autoScroll(now) {
+  //const deltaTime = (now - lastTime) / 1000;
+  //lastTime = now;
+ // if (scrolling) {
+  //  window.scrollBy(0, speed * deltaTime * direction); //, behavior: "smooth" - can affect and restrict scroll at higher speeds // ({ top: speed * direction })
+  //}
+  //requestAnimationFrame(autoScroll);
+ 
+  //call auto everyframe 
+//}
+ 
+//autoScroll();
 
 
 function isAtBottom(offset = 10) {
@@ -32,6 +49,14 @@ function isAtBottom(offset = 10) {
 
 function isAtTop(offset = 10) {
   return window.scrollY <= offset;
+}
+
+function increaseSpeed(){
+
+}
+
+function decreaseSpeed(){
+
 }
 
 function isButtonVisible(element) {
@@ -198,9 +223,8 @@ chrome.runtime.onMessage.addListener((msg) => {
 });
 
 
-//be able to make it slower
-//change the UI of the popup
-//fix speed so u can adjust it
+
+
 
 
 
@@ -210,7 +234,7 @@ chrome.runtime.onMessage.addListener((msg) => {
 
 
 //make autoscroller even slower
-//make it so u can reverse
+//make it so u can reverse - done
 //make it so it turns pages on a variable timing as well
-//one button for reverse and not reverse
+
 //prev and next separate buttons that go to it at the end of the page
